@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
- 
+
 class Node{
     public:
         int val;
@@ -22,43 +22,42 @@ void insert_at_tail(Node* &head,Node* &tail,int val){
     tail->next = newnode;
     tail = tail->next;
 }
-
-void sort_linked_list(Node* head){
-    for(Node* i = head;i->next != NULL;i = i->next){
-
-        for(Node* j = i->next;j != NULL;j = j->next){
-
-            if(i->val>j->val){ 
-                swap(i->val,j->val);
-            }
-        }
-    }
-}
-
-void print_linked_list(Node* head){
-    Node* temp = head;
-    while(temp != NULL){
-        cout << temp->val << endl;
-        temp = temp->next;
-    }
-}
-
 int main(){
     Node* head = NULL;
     Node* tail = NULL;
-
     int val;
+    int val2;
+    int count=0;
     while (true)
     {
         cin >> val;
         if(val == -1){
             break;
         }
-
+        count++;
         insert_at_tail(head,tail,val);
+        
     }
-    sort_linked_list(head);
-    print_linked_list(head);
+
+    int count2=0;
+    while (true)
+    {
+        cin >> val;
+        if(val == -1){
+            break;
+        }
+        count2++;
+        insert_at_tail(head,tail,val2);
+        
+    }
+
+    if(count == count2){
+        cout << "YES" << endl;
+    }
     
+    else{
+        cout << "NO" << endl;
+    }
+
     return 0;
 }

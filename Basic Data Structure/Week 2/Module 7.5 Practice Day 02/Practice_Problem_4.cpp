@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
- 
+
 class Node{
     public:
         int val;
@@ -23,12 +23,10 @@ void insert_at_tail(Node* &head,Node* &tail,int val){
     tail = tail->next;
 }
 
-void sort_linked_list(Node* head){
-    for(Node* i = head;i->next != NULL;i = i->next){
-
-        for(Node* j = i->next;j != NULL;j = j->next){
-
-            if(i->val>j->val){ 
+void sort_descending_order(Node* &head){
+    for(Node* i=head;i!=NULL;i=i->next){
+        for(Node* j=i->next;j!=NULL;j=j->next){
+            if(i->val<j->val){
                 swap(i->val,j->val);
             }
         }
@@ -38,7 +36,7 @@ void sort_linked_list(Node* head){
 void print_linked_list(Node* head){
     Node* temp = head;
     while(temp != NULL){
-        cout << temp->val << endl;
+        cout << temp->val << " ";
         temp = temp->next;
     }
 }
@@ -54,11 +52,11 @@ int main(){
         if(val == -1){
             break;
         }
-
         insert_at_tail(head,tail,val);
     }
-    sort_linked_list(head);
-    print_linked_list(head);
     
+    sort_descending_order(head);
+    print_linked_list(head);
+
     return 0;
 }

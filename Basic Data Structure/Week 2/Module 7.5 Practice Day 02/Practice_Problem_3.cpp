@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
- 
+
 class Node{
     public:
         int val;
@@ -23,24 +23,15 @@ void insert_at_tail(Node* &head,Node* &tail,int val){
     tail = tail->next;
 }
 
-void sort_linked_list(Node* head){
-    for(Node* i = head;i->next != NULL;i = i->next){
-
-        for(Node* j = i->next;j != NULL;j = j->next){
-
-            if(i->val>j->val){ 
-                swap(i->val,j->val);
-            }
+void max_value(Node* &head){
+    Node* max = head;
+    for(Node* i=head;i!=NULL;i=i->next){
+        if(max->val<i->val){
+            max = i;
         }
     }
-}
 
-void print_linked_list(Node* head){
-    Node* temp = head;
-    while(temp != NULL){
-        cout << temp->val << endl;
-        temp = temp->next;
-    }
+    cout << max->val << endl;
 }
 
 int main(){
@@ -54,11 +45,10 @@ int main(){
         if(val == -1){
             break;
         }
-
         insert_at_tail(head,tail,val);
     }
-    sort_linked_list(head);
-    print_linked_list(head);
+    
+    max_value(head);
     
     return 0;
 }
