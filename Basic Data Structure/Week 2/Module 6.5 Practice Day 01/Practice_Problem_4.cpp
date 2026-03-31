@@ -41,6 +41,16 @@ void insert_at_any_position(Node* &head,int index,int val){
     temp->next = newnode;
 }
 
+int size_linked_list(Node* head){
+    int count = 0;
+    Node* temp = head;
+    while(temp != NULL){
+        count++;
+        temp = temp->next;
+    }
+    return count;
+}
+
 void print_linked_list(Node* head){
     Node* temp = head;
     while(temp != NULL){
@@ -54,40 +64,38 @@ int main(){
     Node* head = NULL;
     Node* tail = NULL;
     int val;
-    int count = 0;
     while (true)
     {
         cin >> val;
         if(val == -1){
             break;
         }
-        count++;
+        
         insert_at_tail(head,tail,val);
     }
 
-    int q,val1;
-    while(cin >> q >> val1){
-        if(q>count){
+    int index;
+    while(cin >> index >> val){
+        int sz = size_linked_list(head);
+        if(index>sz){
             cout << "Invalid" << endl;
+            continue;
         }
-        else if(q==0){
-            insert_at_head(head ,val1);
-            print_linked_list(head);
-            count = count + 1;
-        }
-
-        else if(q==count){
-            insert_at_tail(head,tail,val1);
-            print_linked_list(head);
-            count = count + 1;
+        
+        else if(index==sz){
+            insert_at_tail(head,tail,val);          
         }
 
-        else if(q>0 && q<=count){
-            int index = q;
-            insert_at_any_position(head,index,val1);
-            print_linked_list(head);
-            count = count + 1;
+        else if(index==0){
+            insert_at_head(head ,val);         
         }
+
+        else{
+            int inx = index;
+            insert_at_any_position(head,inx,val);
+        }
+
+        print_linked_list(head);
     }
 
     return 0;
