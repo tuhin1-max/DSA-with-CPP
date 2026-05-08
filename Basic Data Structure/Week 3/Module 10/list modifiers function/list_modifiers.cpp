@@ -24,7 +24,7 @@ int main(){
         cout << val << endl;
     }
 
-    cout << "pop_back & pop_front:" << endl;
-
+    cout << "next itaretor:" << endl;
+    cout << *next(l.begin(),2);
     return 0;
 }
