@@ -25,7 +25,13 @@ int main(){
     }
 
     cout << "next itaretor:" << endl;
-    cout << *next(l.begin(),2);//index
-    
+    cout << *next(l.begin(),1) << endl;//index
+
+    cout << "Insert at any position:" << endl;
+    l.insert(next(l.begin(),2),100);//
+    for(int val : l){
+        cout << val << endl;
+    }
+
     return 0;
 }
