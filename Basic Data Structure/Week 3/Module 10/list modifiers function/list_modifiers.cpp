@@ -28,7 +28,8 @@ int main(){
     cout << *next(l.begin(),1) << endl;//index
 
     cout << "Insert at any position:" << endl;
-    l.insert(next(l.begin(),2),100);//(index,value)
+    list<int>l3 = {1,2,3,4,5};
+    l.insert(next(l.begin(),2),l3.begin(),l3.end());//(index,value)
     for(int val : l){
         cout << val << endl;
     }
