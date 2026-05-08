@@ -11,11 +11,18 @@ int main(){
     }
 
     cout << "push_back & push_front:" << endl;
-
     l.push_back(40);//insert at tail
     l.push_front(100);//insert atr head
     for(int val : l){
         cout << val << endl;
     }
+
+    cout << "pop_back & pop_front:" << endl;
+    l.pop_back();//delete at tail
+    l.pop_front();//delete atr head
+    for(int val : l){
+        cout << val << endl;
+    }
+
     return 0;
 }
