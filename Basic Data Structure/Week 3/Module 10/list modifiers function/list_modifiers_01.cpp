@@ -29,6 +29,8 @@ int main(){
 
     cout << "Insert at any position:" << endl;
     list<int>l3 = {1,2,3,4,5};
+    vector<int> v = {200,300,400};
+    l.insert(next(l.begin(),3),v.begin(),v.end());
     l.insert(next(l.begin(),2),l3.begin(),l3.end());//(index,value)
     for(int val : l){
         cout << val << endl;
