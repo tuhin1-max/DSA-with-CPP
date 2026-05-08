@@ -6,7 +6,12 @@ int main(){
     list<int>l(10,5);
     cout << l.size() << endl;
     l.clear();
-    cout << l.size();
+    cout << l.size() << endl;
+
+    if(l.empty()){
+        cout << "Empty" << endl;
+    }
+
     for(int val : l){
         cout << val << endl;
     }
