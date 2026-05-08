@@ -28,7 +28,7 @@ int main(){
     cout << *next(l.begin(),1) << endl;//index
 
     cout << "Insert at any position:" << endl;
-    l.insert(next(l.begin(),2),100);//
+    l.insert(next(l.begin(),2),100);//(index,value)
     for(int val : l){
         cout << val << endl;
     }
