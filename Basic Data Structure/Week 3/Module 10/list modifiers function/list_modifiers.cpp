@@ -9,5 +9,13 @@ int main(){
     for(int val : l2){
         cout << val << endl;
     }
+
+    cout << "push_back & push_front:" << endl;
+
+    l.push_back(40);//insert at tail
+    l.push_front(100);//insert atr head
+    for(int val : l){
+        cout << val << endl;
+    }
     return 0;
 }
