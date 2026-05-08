@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-    // ues clear:
+    // ues clear function:
     list<int>l(10,5);
     cout << l.size() << endl;
     l.clear();
