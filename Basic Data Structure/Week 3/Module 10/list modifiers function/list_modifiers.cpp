@@ -25,6 +25,7 @@ int main(){
     }
 
     cout << "next itaretor:" << endl;
-    cout << *next(l.begin(),2);
+    cout << *next(l.begin(),2);//index
+    
     return 0;
 }
