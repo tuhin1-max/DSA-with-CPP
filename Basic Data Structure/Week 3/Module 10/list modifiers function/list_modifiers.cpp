@@ -24,5 +24,7 @@ int main(){
         cout << val << endl;
     }
 
+    cout << "pop_back & pop_front:" << endl;
+
     return 0;
 }
