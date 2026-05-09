@@ -27,7 +27,7 @@ int main(){
     Node* slow = head;
     Node* fast = head;
     bool flag = false;
-    while (fast == NULL)
+    while (fast != NULL)
     {
         slow = slow->next;
         fast = fast->next->next;
