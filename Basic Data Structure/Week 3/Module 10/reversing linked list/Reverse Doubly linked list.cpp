@@ -36,7 +36,7 @@ void print_forward(Node* head){
 }
 
 void reverse_doubly(Node* head,Node* tail){
-    for(Node* i=head,*j=tail;i<j;i=i->next,j=j->prev){
+    for(Node* i=head,*j=tail;i!=j && i->prev!=j;i=i->next,j=j->prev){
         swap(i->val,j->val);
     }
 }
@@ -55,6 +55,6 @@ int main(){
 
     print_forward(head);
     reverse_doubly(head,tail);
-
+    print_forward(head);
     return 0;
 }
