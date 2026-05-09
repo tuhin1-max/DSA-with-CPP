@@ -24,13 +24,14 @@ void insert_at_tail(Node* &head,Node* &tail,int val){
     
 }
 
-void print_reverse(Node* temp){
+void reverse_linked_list(Node* &head,Node* temp){
 
-    if(temp == NULL){
+    if(temp->next == NULL){
+        head = temp;
         return;
     }
-    print_reverse(temp->next);
-    cout << temp->val << endl;
+    reverse_linked_list(head,temp->next);
+    
 }
 
 int main(){
@@ -48,7 +49,7 @@ int main(){
         insert_at_tail(head,tail,val);
     }
 
-    print_reverse(head);
+    reverse_linked_list(head,head);
     
     return 0;
 }
