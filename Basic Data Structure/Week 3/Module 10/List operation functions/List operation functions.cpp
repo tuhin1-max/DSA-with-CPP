@@ -2,6 +2,7 @@
 using namespace std;
 
 int main(){
+    cout << "remove function:" << endl;
     list<int> l = {20,30,40,50,30,60,60,10};
     l.remove(10);
 
