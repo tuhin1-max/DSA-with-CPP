@@ -23,5 +23,29 @@ int main(){
     b->next = c;
     c->next = d;
     d->next = a;
+
+    Node* slow = head;
+    Node* fast = head;
+    bool flag = false;
+    while (fast == NULL)
+    {
+        slow = slow->next;
+        fast = fast->next->next;
+
+        if(slow == fast){
+            // cycle derected
+            flag = true;
+            break;
+        }
+        
+    }
+
+    if(flag == true){
+        cout << "Cycle Derected";
+    }
+    else{
+        cout << "No Cycle";
+    }
+
     return 0;
 }
