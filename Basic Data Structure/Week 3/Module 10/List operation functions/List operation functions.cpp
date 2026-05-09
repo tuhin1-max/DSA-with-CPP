@@ -9,5 +9,23 @@ int main(){
     for(int val : l){
         cout << val << endl;
     }
+
+    cout << "sort function:" << endl;
+    l.sort();
+    for(int val : l){
+        cout << val << endl;
+    }
+
+    cout << "descending order:" << endl;
+    l.sort(greater<int>());
+    for(int val : l){
+        cout << val << endl;
+    }
+
+    cout << "unique function:" << endl;//must list sorted
+    l.unique();
+    for(int val : l){
+        cout << val << endl;
+    }
     return 0;
 }
