@@ -24,7 +24,7 @@ void insert_at_tail(Node* &head,Node* &tail,int val){
     
 }
 
-void reverse_linked_list(Node* &head,Node* & tail,Node* temp){
+void reverse_linked_list(Node* &head,Node* &tail,Node* temp){
 
     if(temp->next == NULL){
         head = temp;
