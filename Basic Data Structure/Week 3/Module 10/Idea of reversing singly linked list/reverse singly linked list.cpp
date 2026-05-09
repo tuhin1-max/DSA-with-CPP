@@ -31,7 +31,8 @@ void reverse_linked_list(Node* &head,Node* temp){
         return;
     }
     reverse_linked_list(head,temp->next);
-    
+    temp->next->next = temp;
+    temp->next = NULL;
 }
 
 int main(){
