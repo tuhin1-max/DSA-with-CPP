@@ -27,5 +27,11 @@ int main(){
     for(int val : l){
         cout << val << endl;
     }
+
+    cout << "reverse function:" << endl;//must list sorted
+    l.reverse();
+    for(int val : l){
+        cout << val << endl;
+    }
     return 0;
 }
