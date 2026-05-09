@@ -61,7 +61,6 @@ int main(){
 
     reverse_linked_list(head,head);
     print_linked_list(head);
-    cout << head->val << endl;
-    
+
     return 0;
 }
