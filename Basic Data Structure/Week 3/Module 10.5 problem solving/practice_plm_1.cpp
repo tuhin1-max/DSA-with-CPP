@@ -35,17 +35,19 @@ void print_linked_list(Node* head){
 }
 
 void same_or_not_same_doubly(Node* head,Node* tail){
-    int flag = 0;
+    bool flag = false;
     for(Node* i=head,*j=tail;i!=j && i->prev!=j;i=i->next,j=j->prev){
         if(i->val != j->val){
-            flag = 1;
-            cout << "NO" << endl;
+            flag = true;
             break;
         }
     }
 
-    if(flag == 0){
+    if(flag == false){
         cout << "YES" << endl;
+    }
+    else{
+        cout << "NO" << endl;
     }
 }
 
