@@ -24,6 +24,7 @@ int main(){
         if(x == -1){
             break;
         }
+        
     }
     
     return 0;
