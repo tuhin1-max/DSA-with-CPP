@@ -13,6 +13,10 @@ class Node{
         }
 };
 
+void insert_at_tail(){
+
+}
+
 int main(){
     Node* head = NULL;
     Node* tail = NULL;
@@ -24,7 +28,7 @@ int main(){
         if(x == -1){
             break;
         }
-        
+
     }
     
     return 0;
