@@ -33,6 +33,22 @@ void print_linked_list(Node* head){
         temp = temp->next;
     }
 }
+
+void same_or_not_same_doubly(Node* head,Node* tail){
+    int flag = 0;
+    for(Node* i=head,*j=tail;i!=j && i->prev!=j;i=i->next,j=j->prev){
+        if(i->val != j->val){
+            flag = 1;
+            cout << "NO" << endl;
+            break;
+        }
+    }
+
+    if(flag == 0){
+        cout << "YES" << endl;
+    }
+}
+
 int main(){
     Node* head = NULL;
     Node* tail = NULL;
@@ -58,7 +74,8 @@ int main(){
 
         insert_at_tail(head,tail,y);
     }
-
+    
+    same_or_not_same_doubly(head,tail);
     // print_linked_list(head);
     return 0;
 }
