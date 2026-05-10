@@ -36,7 +36,7 @@ void print_linked_list(Node* head){
 
 void same_or_not_same_doubly(Node* head,Node* tail){
     bool flag = false;
-    for(Node* i=head,*j=head;i!=j && i->prev!=j;i=i->next,j=j->next){
+    for(Node* i=head,*j=head;i!=NULL || j!=NULL;i=i->next,j=j->next){
         if(i->val != j->val){
             flag = true;
             break;
