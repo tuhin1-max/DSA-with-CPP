@@ -34,26 +34,33 @@ void print_linked_list(Node* head){
     }
 }
 
-void same_or_not_same_doubly(Node* head,Node* tail){
-    bool flag = false;
-    for(Node* i=head,*j=head;i!=NULL || j!=NULL;i=i->next,j=j->next){
+void same_or_not_same_doubly(Node* head1,Node* head2){
+    
+    Node* i = head1;
+    Node* j = head2;
+
+    while(i != NULL && j != NULL){
+
         if(i->val != j->val){
-            flag = true;
-            break;
+            cout << "NO" << endl;
+            return;
         }
+
+        i = i->next;
+        j = j->next;
     }
 
-    if(flag == false){
-        cout << "YES" << endl;
+    if(i != NULL || j != NULL){
+        cout << "NO" << endl;
     }
     else{
-        cout << "NO" << endl;
+        cout << "YES" << endl;
     }
 }
 
 int main(){
-    Node* head = NULL;
-    Node* tail = NULL;
+    Node* head1 = NULL;
+    Node* tail1 = NULL;
 
     while(1){
         int x;
@@ -62,11 +69,14 @@ int main(){
             break;
         }
 
-        insert_at_tail(head,tail,x);
+        insert_at_tail(head1,tail1,x);
     }
     
     // print_linked_list(head);
     
+    Node* head2 = NULL;
+    Node* tail2 = NULL;
+
     while(1){
         int y;
         cin >> y;
@@ -74,10 +84,10 @@ int main(){
             break;
         }
 
-        insert_at_tail(head,tail,y);
+        insert_at_tail(head2,tail2,y);
     }
     
-    same_or_not_same_doubly(head,tail);
+    same_or_not_same_doubly(head1,head2);
     // print_linked_list(head);
     return 0;
 }
