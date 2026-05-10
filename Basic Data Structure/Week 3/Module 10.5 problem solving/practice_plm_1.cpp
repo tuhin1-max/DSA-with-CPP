@@ -13,8 +13,17 @@ class Node{
         }
 };
 
-void insert_at_tail(){
-ytyh
+void insert_at_tail(Node** head, Node** tail, int val){
+    Node* new_node = new Node(val);
+    if(*tail == NULL){
+        *head = new_node;
+        *tail = new_node;
+    }
+    else{
+        (*tail)->next = new_node;
+        new_node->prev = *tail;
+        *tail = new_node;
+    }
 }
 
 int main(){
