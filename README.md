@@ -107,7 +107,7 @@ DSA-with-CPP/
 - **Language:** C++
 - **Compiler:** G++
 - **Editor:** VS Code
-- **Platform:** Codeforces, HackerRank
+- **Platform:** Codeforces, HackerRank, leetcode
 
 ---
 
