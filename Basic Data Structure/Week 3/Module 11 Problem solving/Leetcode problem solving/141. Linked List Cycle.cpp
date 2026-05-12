@@ -8,7 +8,7 @@ struct ListNode {
     ListNode(int x) : val(x), next(NULL) {}
 };
 
-// ==================== SOLUTION ====================
+// ====================  SOLUTION  ====================
 class Solution {
 public:
     ListNode* middleNode(ListNode* head) {
