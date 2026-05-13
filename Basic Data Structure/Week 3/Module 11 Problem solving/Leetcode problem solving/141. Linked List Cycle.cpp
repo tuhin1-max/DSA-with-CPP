@@ -1,14 +1,19 @@
 class Solution {
 public:
-    ListNode* middleNode(ListNode* head) {
+    bool hasCycle(ListNode *head) {
         ListNode* fast = head;
         ListNode* slow = head;
-
-        while (fast != NULL && fast->next != NULL) {
+        bool flag = false;
+        while(fast != NULL && fast->next != NULL){
             slow = slow->next;
             fast = fast->next->next;
+
+            if(slow == fast){
+                flag = true;
+                break;
+            }
         }
 
-        return slow;
+        return flag;
     }
 };
