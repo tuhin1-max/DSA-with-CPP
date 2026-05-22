@@ -28,6 +28,7 @@ class myQueue{
             return;
         }
         tail->next = newnode;
+        newnode->prev = tail;
         tail = newnode;
     }
 
@@ -38,7 +39,9 @@ class myQueue{
         delete deletenode;
         if(head == NULL){
             tail = NULL;
+            return;
         }
+        head->prev = NULL;
     }
 
     int front(){             //O(1)
