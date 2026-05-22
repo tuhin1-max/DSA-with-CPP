@@ -25,7 +25,7 @@ class myQueue{
     }
 
     bool empty(){            //O(1)
-        l.empty();
+        return l.empty();
     }
 };
 
