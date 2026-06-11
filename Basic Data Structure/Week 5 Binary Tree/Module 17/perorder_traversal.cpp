@@ -21,6 +21,7 @@ void preorder(Node* root){
     preorder(root->left);       // left
     preorder(root->right);      // right
 }
+
 int main(){
     Node* root = new Node(10);
     Node* a = new Node(20);
