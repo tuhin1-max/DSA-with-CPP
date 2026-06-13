@@ -36,6 +36,7 @@ void level_order(Node* root){
         
     }
 }
+
 int main(){
     Node* root = new Node(10);
     Node* a = new Node(20);
