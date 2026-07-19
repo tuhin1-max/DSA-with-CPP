@@ -17,7 +17,9 @@ This repository contains my notes, code, and problem solutions as I progress thr
 ---
 
 ## 📂 Repository Structure
+```
 DSA-with-CPP/
+│
 ├── Phase-1-CPP-for-DSA/
 │   ├── 01-Min-Max-Swap/
 │   ├── 02-Common-Header-Files/
@@ -67,15 +69,13 @@ DSA-with-CPP/
 │   └── 11-LCS-DP-and-Variations/
 │
 └── Phase-5-Problem-Solving-Part-03/
-├── 01-BFS-and-DFS-Problems/
-├── 02-Graph-Algorithm-Problems/
-├── 03-Bellman-Ford-and-Floyd-Warshall/
-├── 04-0-1-Knapsack-and-Unbounded-Knapsack/
-├── 05-Variations-and-LCS/
-└── 06-DSU-and-Cycle-Detection/
-
----
-
+    ├── 01-BFS-and-DFS-Problems/
+    ├── 02-Graph-Algorithm-Problems/
+    ├── 03-Bellman-Ford-and-Floyd-Warshall/
+    ├── 04-0-1-Knapsack-and-Unbounded-Knapsack/
+    ├── 05-Variations-and-LCS/
+    └── 06-DSU-and-Cycle-Detection/
+```
 ## ✅ Phase 1 — C++ for DSA (Completed)
 - [x] Familiar with C++ syntax
 - [x] min(), max(), swap() functions
