@@ -33,7 +33,7 @@ void bfs(int si, int sj){
             if(valid(ci,cj) && !vis[ci][cj] && grid[ci][cj] == '.'){
                 q.push({ci,cj});
                 vis[ci][cj] = true;
-                level [ci][cj] = level[par_i][par_j] + 1;
+                level[ci][cj] = level[par_i][par_j] + 1;
             }
         }
     }

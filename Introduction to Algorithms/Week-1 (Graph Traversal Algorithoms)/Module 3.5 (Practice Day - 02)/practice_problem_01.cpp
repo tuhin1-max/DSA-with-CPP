@@ -1,40 +1,37 @@
 #include<bits/stdc++.h>
 using namespace std;
-vector<int> adj_list[1005];
-bool vis[1005];
 
-void bfs(int src){ // Time complesity: O(V+E)
-    queue<int> q;  // Space complesity: O(V)
+vector<int> adj_list[1007];
+bool vis[1007];
+
+int bfs(int src){
+    queue<int>q;
     q.push(src);
     vis[src] = true;
 
-    while(!q.empty())
-    {
-        // ber kore ana
+    int count = 1;
+
+    while(!q.empty()){
         int par = q.front();
         q.pop();
 
-        // oi node ke niye kaj kora
-        cout << par << " ";
-
-        // childern gula push kora
-        for(int child : adj_list[par])
-        {
-            if(vis[child] == false)
-            {
+        for(int child : adj_list[par]){
+            if(!vis[child]){
                 q.push(child);
                 vis[child] = true;
+                count++;
             }
-            
         }
     }
-}
 
+    return count;
+
+}
 int main(){
     int n,e;
     cin >> n >> e;
-    while(e--)
-    {
+
+    while(e--){
         int a,b;
         cin >> a >> b;
         adj_list[a].push_back(b);
@@ -42,7 +39,13 @@ int main(){
     }
 
     memset(vis,false,sizeof(vis));
-    bfs(0);
+    int src;
+    cin >> src;
+
+    int res = bfs(src);
+
+    cout << res << endl;
 
     return 0;
 }
+
